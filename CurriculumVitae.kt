@@ -1,7 +1,7 @@
 import SectionName.*
 
 /**
- * code available at https://tinyurl.com/mg6cv2020
+ * code available at https://tinyurl.com/mg6cv20r2
  */
 fun main() {
     print(cv)
@@ -14,12 +14,12 @@ val cv = CurriculumVitae(
         Info("+48606612169"),
         Info("maciek.gorski@gmail.com"),
         Info("mg6maciej@linkedin", "https://www.linkedin.com/in/mg6maciej"),
-    	Info("mg6maciej@github", "https://github.com/mg6maciej"),
-    	Info("mg6maciej@twitter", "https://twitter.com/mg6maciej")
+        Info("mg6maciej@github", "https://github.com/mg6maciej"),
+        Info("mg6maciej@twitter", "https://twitter.com/mg6maciej")
     ),
     Section(
         Experience,
-        Info("Userfeeds", "https://blog.userfeeds.io", "Startup w/ Ethereum, Spring, Neo4j, Kotlin, Python and more", 2017, 2018),
+        Info("Userfeeds", "https://blog.userfeeds.io", "Startup w/ Ethereum, Docker, Spring, Neo4j, Kotlin, Python and more", 2017, 2018),
         Info("EL Passion", "https://www.elpassion.com", "Android, Kotlin, Java, automation", 2014, 2016),
         Info("Cybercom", "https://www.cybercom.com", "Android, Java, trainer", 2011, 2013),
         Info("Gamelion", "https://game-lion.com", "J2ME, Java", 2009, 2010),
@@ -35,8 +35,8 @@ val cv = CurriculumVitae(
         Info("GrainLang", "https://github.com/grainlang", "Object-based programming language")
     ),
     Section(
-    	ActivitiesAndHobbies,
-    	Info("International speaker", "https://slides.com/mg6maciej", "Talking about Android, testing & automation", startYear = 2012),
+        ActivitiesAndHobbies,
+        Info("International speaker", "https://slides.com/mg6maciej", "Talking about Android, testing & automation", startYear = 2012),
         Info("Writing technical articles", "https://programistamag.pl", startYear = 2012),
         Info("Cycling around the world", "https://instagram.com/mg6maciej", startYear = 2010),
         Info("Playing board games", startYear = 1988),
@@ -54,7 +54,13 @@ class Section(val name: SectionName, vararg val info: Info) {
     override fun toString() = (listOf(name) + info).joinToString("\n    ", transform = Any::toString)
 }
 
-class Info(val summary: String, val link: String? = null, val details: String? = null, val startYear: Int? = null, val endYear: Int? = null) {
+class Info(
+    val summary: String,
+    val link: String? = null,
+    val details: String? = null,
+    val startYear: Int? = null,
+    val endYear: Int? = null
+) {
     
     override fun toString() = listOfNotNull(summary, link, details, datesToString()).joinToString("  |  ")
     
@@ -78,4 +84,3 @@ enum class SectionName {
     
     override fun toString() = name.replace(Regex("(?<=[a-z])(?=[A-Z])"), " ")
 }
-
