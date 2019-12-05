@@ -16,7 +16,7 @@ val cv = CurriculumVitae(
         Info("mg6maciej@linkedin", "https://www.linkedin.com/in/mg6maciej"),
     	Info("mg6maciej@github", "https://github.com/mg6maciej"),
     	Info("mg6maciej@twitter", "https://twitter.com/mg6maciej")
-   	),
+    ),
     Section(
         Experience,
         Info("Userfeeds", "https://blog.userfeeds.io", "Startup w/ Ethereum, Spring, Neo4j, Kotlin, Python and more", 2017, 2018),
