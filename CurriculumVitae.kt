@@ -8,7 +8,7 @@ fun main() {
 }
 
 val cv = CurriculumVitae(
-	Section(
+    Section(
         ContactDetails,
         Info("Maciej Górski"),
         Info("+48606612169"),
