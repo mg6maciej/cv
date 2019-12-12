@@ -1,7 +1,7 @@
 import SectionName.*
 
 /**
- * code available at https://tinyurl.com/mg6cv20r2
+ * code available at https://tinyurl.com/mg6cv20r3
  */
 fun main() {
     print(cv)
@@ -15,6 +15,7 @@ val cv = CurriculumVitae(
         Info("maciek.gorski@gmail.com"),
         Info("mg6maciej@linkedin", "https://www.linkedin.com/in/mg6maciej"),
         Info("mg6maciej@github", "https://github.com/mg6maciej"),
+        Info("MaciejGórski@stackoverflow", "https://stackoverflow.com/users/2183804/maciejg%c3%b3rski"),
         Info("mg6maciej@twitter", "https://twitter.com/mg6maciej")
     ),
     Section(
